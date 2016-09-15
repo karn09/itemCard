@@ -45,9 +45,10 @@
             <img class="ui avatar image" src={{lineItems[item].image}}>
             <div class="content">
                 <div class="header">
-                    {{lineItems[item].title}}
+                    <span class="itemInfo">
+                      {{lineItems[item].title}} @ {{lineItems[item].unitPrice}} x {{lineItems[item].quantity}}
+                    </span>
                 </div>
-                <div class="description">cost:<span id="item-cost">{{lineItems[item].unitPrice}}</span> - qty:<span id="item-qty">{{lineItems[item].quantity}}</span></div>
             </div>
         </div>
         {{/lineItems}}
