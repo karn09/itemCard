@@ -2,7 +2,7 @@ if (!Kustomer) {
   throw "Kustomer SDK not available."
 }
 
-if (!window.jQuery) {
+if (!window.$) {
   var jq = document.createElement('script'); jq.type = 'text/javascript';
   jq.src = 'http://code.jquery.com/jquery-3.1.0.min.js';
   document.getElementsByTagName('head')[0].appendChild(jq);
@@ -11,7 +11,7 @@ if (!window.jQuery) {
 
 function updateCard(context) {
   // cache order object info
-  var orderInfo = context['kobject.order']['data'];
+  var orderInfo = context['kobject.order']['attributes']['data'];
   var lineItems = orderInfo['lineItems'];
   var orderTitle = orderInfo['orderTitle'];
   var orderTotal = orderInfo['orderTotal'];
