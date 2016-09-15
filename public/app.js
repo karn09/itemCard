@@ -14,42 +14,39 @@
 		var orderTitle = orderInfo['orderTitle'];
 		var orderTotal = orderInfo['orderTotal'];
 
-		var $orderedItemsList = $('#ordered-items');
-
-		var orders = new Ractive({
-      el: 'orderedItemsCard',
-      template: '#items-info',
-      data: {
-        "orderInfo": orderInfo,
-        "lineItems": lineItems,
-        "orderTitle": orderTitle,
-        "orderTotal": orderTitle
-      }
+		var orderedItems = new Ractive({
+			el: '#orderedItemsList',
+			template: '#orderedItemsInfo',
+			data: {
+				// "lineItems": [{
+				// 	"image": "http://img.costumecraze.com/images/vendors/rubies/882019-Deluxe-Kids-Chewbacca-Costume-large.jpg",
+				// 	"unitPrice": "$47.12",
+				// 	"color": "N/A",
+				// 	"size": "large",
+				// 	"title": "Chebacca Costume",
+				// 	"quantity": "2"
+				// }, {
+				// 	"image": "https://dl.dropboxusercontent.com/u/7062951/img_test/genesis-lightsabers.jpg",
+				// 	"unitPrice": "$244.74",
+				// 	"color": "Blue",
+				// 	"size": "N/A",
+				// 	"title": "Light Saber",
+				// 	"quantity": "1"
+				// }],
+				"lineItems": lineItems,
+			}
 		});
 
-		lineItems.forEach(function (item) {
-			var qty = item.quantity;
-			var price = item.price;
-			var title = item.title;
-			var image = item.image;
-			var newItem =
-				`
-    <div class="item">
-        <img class="ui avatar image" src="` + image + `">
-        <div class="content">
-            <a class="header">` + title + `</a>
-            <div class="description">cost:<span class="item-price">` + price + `</span> - qty:<span class="item-qty">` + quantity + `</span></div>
-        </div>
-    </div>
-    `;
-
-			$orderedItemsList.append($(newItem));
-		});
-
+		var orderTotal = new Ractive({
+			el: '#orderTotal',
+			template: '#orderTotalInfo',
+			data: {
+				'orderTotal': orderTotal
+			}
+		})
 	};
 
-
 	Kustomer.initialize(updateCard),
-	Kustomer.on("context", updateCard);
+		Kustomer.on("context", updateCard);
 
 })(window, Ractive, Kustomer);

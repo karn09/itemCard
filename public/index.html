@@ -12,7 +12,7 @@
     <script src='ractive.js'></script>
 </head>
 
-<body id="orderedItemsCard">
+<body>
     <div class="ui card mainCard">
         <div class="content">
             <div class="ui header cardHeader">
@@ -25,26 +25,38 @@
         </div>
         <hr class="lineBreak" />
         <div class="content">
-            <div id="items-info" class="ui relaxed divided list">
-                <!-- <div class="item">
-                    <img class="ui avatar image" src="http://img.costumecraze.com/images/vendors/rubies/882019-Deluxe-Kids-Chewbacca-Costume-large.jpg">
-                    <div class="content">
-                        <a class="header">Chewbacca Costume</a>
-                        <div class="description">cost:<span id="item-cost"></span> - qty:<span id="item-qty"></span></div>
-                    </div>
-                </div> -->
-            </div>
-
+            <div class="ui relaxed list" id="orderedItemsList"></div>
         </div>
-        <hr class="lineBreak" />
+        <!-- <hr class="lineBreak" /> -->
         <div class="content">
-            <div class="ui header cardHeader">
-                Order total:
-                <span id="order-total"></span>
-            </div>
+            <div id="orderTotal"></div>
         </div>
     </div>
+    <script id="orderTotalInfo" type="text/ractive">
+        <div class="ui header cardHeader">
+            Order total:
+            <span id="order-total"></span>
+        </div>
+    </script>
+    
+    <script id="orderedItemsInfo" type="text/ractive">
+        {{#lineItems:item}}
+        <div class="item">
+            <img class="ui avatar image" src={{lineItems[item].image}}>
+            <div class="content">
+                <div class="header">
+                    {{lineItems[item].title}}
+                </div>
+                <div class="description">cost:<span id="item-cost">{{lineItems[item].unitPrice}}</span> - qty:<span id="item-qty">{{lineItems[item].quantity}}</span></div>
+            </div>
+        </div>
+        {{/lineItems}}
+    </script>
+
     <script src="app.js"></script>
+
+
+
 </body>
 
 </html>
