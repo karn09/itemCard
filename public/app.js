@@ -1,4 +1,4 @@
-function (window, Ractive, Kustomer)({
+(function (window, Ractive, Kustomer) {
 
 	// if (!window.$) {
 	//   var jq = document.createElement('script'); jq.type = 'text/javascript';
