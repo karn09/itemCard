@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
+<!-- id: 57d9f2f82ec66513004bb4c7 -->
 
 <head>
     <meta charset="utf-8">
     <title>sales card</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="card.min.css">
+    <link rel="stylesheet" type="text/css" href="genericCard.min.css">
+    <script src="https://cdn.helpapp.io/card-js/latest/kustomer-card.min.js" charset="utf-8"></script>
 </head>
 
 <body>
-    <div>hello world</div>
-    <script src="https://cdn.helpapp.io/card-js/latest/kustomer-card.min.js" charset="utf-8"></script>
+    <div class="ui card mainCard">
+        <div class="content">
+            <div class="ui header cardHeader">
+                <div class="ui one column grid">
+                    <div class="column">
+                        Ordered items:
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="lineBreak" />
+        <div class="content">
+            <div id="ordered-items" class="ui relaxed divided list">
+                <!-- <div class="item">
+                    <img class="ui avatar image" src="http://img.costumecraze.com/images/vendors/rubies/882019-Deluxe-Kids-Chewbacca-Costume-large.jpg">
+                    <div class="content">
+                        <a class="header">Chewbacca Costume</a>
+                        <div class="description">cost:<span id="item-cost"></span> - qty:<span id="item-qty"></span></div>
+                    </div>
+                </div> -->
+            </div>
+
+        </div>
+        <hr class="lineBreak" />
+        <div class="content">
+            <div class="ui header cardHeader">
+                Order total:
+                <span id="order-total"></span>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 
