@@ -9,9 +9,10 @@
     <link rel="stylesheet" type="text/css" href="card.min.css">
     <link rel="stylesheet" type="text/css" href="genericCard.min.css">
     <script src="https://cdn.helpapp.io/card-js/latest/kustomer-card.min.js" charset="utf-8"></script>
+    <script src='http://cdn.ractivejs.org/latest/ractive.js'></script>
 </head>
 
-<body>
+<body id="orderedItemsCard">
     <div class="ui card mainCard">
         <div class="content">
             <div class="ui header cardHeader">
@@ -24,7 +25,7 @@
         </div>
         <hr class="lineBreak" />
         <div class="content">
-            <div id="ordered-items" class="ui relaxed divided list">
+            <div id="items-info" class="ui relaxed divided list">
                 <!-- <div class="item">
                     <img class="ui avatar image" src="http://img.costumecraze.com/images/vendors/rubies/882019-Deluxe-Kids-Chewbacca-Costume-large.jpg">
                     <div class="content">
