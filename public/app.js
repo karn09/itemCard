@@ -18,21 +18,6 @@
 			el: '#orderedItemsList',
 			template: '#orderedItemsInfo',
 			data: {
-				// "lineItems": [{
-				// 	"image": "http://img.costumecraze.com/images/vendors/rubies/882019-Deluxe-Kids-Chewbacca-Costume-large.jpg",
-				// 	"unitPrice": "$47.12",
-				// 	"color": "N/A",
-				// 	"size": "large",
-				// 	"title": "Chebacca Costume",
-				// 	"quantity": "2"
-				// }, {
-				// 	"image": "https://dl.dropboxusercontent.com/u/7062951/img_test/genesis-lightsabers.jpg",
-				// 	"unitPrice": "$244.74",
-				// 	"color": "Blue",
-				// 	"size": "N/A",
-				// 	"title": "Light Saber",
-				// 	"quantity": "1"
-				// }],
 				"lineItems": lineItems,
 			}
 		});

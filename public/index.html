@@ -35,10 +35,10 @@
     <script id="orderTotalInfo" type="text/ractive">
         <div class="ui header cardHeader">
             Order total:
-            <span id="order-total"></span>
+            <span id="order-total">{{orderTotal}}</span>
         </div>
     </script>
-    
+
     <script id="orderedItemsInfo" type="text/ractive">
         {{#lineItems:item}}
         <div class="item">
